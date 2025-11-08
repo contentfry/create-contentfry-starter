@@ -1,9 +1,9 @@
 {
   "name": "create-contentfry-starter",
-  "version": "1.0.2",
-  "description": "A CLI tool to create a Uhuu starter app",
+  "version": "1.0.4",
+  "description": "A CLI tool to create a Contentfry starter app",
   "license": "MIT",
-  "author": "uhuu",
+  "author": "contentfry",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/index.d.ts",

@@ -7,7 +7,7 @@ import { createWriteStream, promises as fs } from "fs";
 
 const pipeline = promisify(Stream.pipeline);
 
-const TEMP_PREFIX = ".uhuu-example.temp";
+const TEMP_PREFIX = ".contentfry-example.temp";
 
 async function downloadTar(url: string) {
   const tempFile = join(process.cwd(), `${TEMP_PREFIX}-${Date.now()}`);

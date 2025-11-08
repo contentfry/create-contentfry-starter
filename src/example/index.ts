@@ -20,7 +20,7 @@ const run = async (
     console.log(
       boxen(
         [
-          chalk`You can find {bold uhuu} examples at:`,
+          chalk`You can find {bold contentfry} examples at:`,
           "",
           chalk`{dim.cyan github.com/}{cyan contentfry/contentfry-starter/tree/master/examples}`,
         ].join("\n"),
@@ -41,7 +41,7 @@ const run = async (
 
   const root = path.resolve(destination || example);
 
-  const existSpinner = ora("Checking if example exists in uhuu").start();
+  const existSpinner = ora("Checking if example exists in contentfry").start();
   const found = await existsInRepo({
     organization: GITHUB_ORG,
     repository: GITHUB_REPO,
@@ -50,7 +50,7 @@ const run = async (
   });
 
   if (found) {
-    existSpinner.succeed("Example found in uhuu repository");
+    existSpinner.succeed("Example found in contentfry repository");
   } else {
     existSpinner.fail(
       `Could not locate an example named ${chalk.red(`"${example}"`)}`,
@@ -58,7 +58,7 @@ const run = async (
     console.log(
       boxen(
         [
-          chalk`You can find {bold uhuu} examples at:`,
+          chalk`You can find {bold contentfry} examples at:`,
           "",
           chalk`{dim.cyan github.com/}{cyan contentfry/contentfry-starter/tree/master/examples}`,
         ].join("\n"),
@@ -146,7 +146,7 @@ const run = async (
 
   const gitSpinner = ora(`Initializing Git in ${chalk.cyan(cdPath)}.`).start();
 
-  const gitStatus = gitInit(root, "Initial commit from Create uhuu App");
+  const gitStatus = gitInit(root, "Initial commit from Create contentfry App");
 
   if (gitStatus === "git-not-found") {
     gitSpinner.warn(
@@ -187,10 +187,10 @@ const run = async (
       [
         chalk`Created {cyan ${example}} at {cyan ${cdPath}}`,
         "",
-        chalk`Start using your new {bold uhuu} template example by running:`,
+        chalk`Start using your new {bold contentfry} display example by running:`,
         "",
         chalk`  {bold cd} {cyan ${cdPath}}`,
-        chalk`  {bold ${pm} ${pmRun}}{cyan uhuu}`,
+        chalk`  {bold ${pm} ${pmRun}}{cyan dev}`,
       ].join("\n"),
       {
         
